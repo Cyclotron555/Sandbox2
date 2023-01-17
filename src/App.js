@@ -1,7 +1,10 @@
 import React from "react";
 import "./styles.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import About from "./About";
+import Contact from "./Contact";
+import Home from "./Home";
+
 export default function App() {
   return (
     <div className="App">
@@ -9,8 +12,15 @@ export default function App() {
       <button>Contact Us</button>
       <button>Home Page</button>
       <Switch>
-        <Route path="/About"></Route>
-        <About />
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+        <Route path="/home">
+          <Home />
+        </Route>
       </Switch>
     </div>
   );
